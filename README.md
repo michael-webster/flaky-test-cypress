@@ -10,6 +10,7 @@ There are several flaky situations. Each example is in its own branch and includ
 
 - branch [level1](https://github.com/bahmutov/flaky-test-cypress/tree/level1) to warm you up
 - branch [level2](https://github.com/bahmutov/flaky-test-cypress/tree/level2) where you need to burn the test to prove it is flaky or not
+- branch [level3](https://github.com/bahmutov/flaky-test-cypress/tree/level3) shows a fast test that somehow still fails
 
 ## Install and run the app
 
