@@ -1,62 +1,65 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 /* eslint no-underscore-dangle: [2, { "allow": ["_loading"] }] */
-import React from 'react';
-import Core from './api/core.json';
-import Electives from './api/electives.json';
+import React from 'react'
+import Core from './api/core.json'
+import Electives from './api/electives.json'
 
 const Courses = {
   core: Core,
-  electives: Electives
-};
+  electives: Electives,
+}
 
 module.exports = class extends React.Component {
   static propTypes = {
     department: PropTypes.string,
     course: PropTypes.string,
-    onChange: PropTypes.func.isRequired
-  };
+    onChange: PropTypes.func.isRequired,
+  }
 
   state = {
     department: null,
     course: null,
     courses: [],
-    _loading: false
-  };
+    _loading: false,
+  }
 
   getDerivedStateFromProps(update) {
     return {
       department: update.department,
-      course: update.course
-    };
+      course: update.course,
+    }
   }
 
-  onSelectDepartment = evt => {
-    const department = evt.target.value;
-    const course = null;
-    this.setState({department, course});
-    this.props.onChange({name: 'department', value: department});
-    this.props.onChange({name: 'course', value: course});
+  onSelectDepartment = (evt) => {
+    const department = evt.target.value
+    const course = null
+    this.setState({ department, course })
+    this.props.onChange({ name: 'department', value: department })
+    this.props.onChange({ name: 'course', value: course })
 
-    if (department) this.fetch(department);
-  };
+    if (department) this.fetch(department)
+  }
 
-  onSelectCourse = evt => {
-    const course = evt.target.value;
-    this.setState({course});
-    this.props.onChange({name: 'course', value: course});
-  };
+  onSelectCourse = (evt) => {
+    const course = evt.target.value
+    evt.target.value = ''
+    setTimeout(() => {
+      this.setState({ course })
+      this.props.onChange({ name: 'course', value: course })
+    }, 2000)
+  }
 
-  fetch = department => {
-    this.setState({_loading: true, courses: []});
-    apiClient(department).then(courses => {
-      this.setState({_loading: false, courses: courses});
-    });
-  };
+  fetch = (department) => {
+    this.setState({ _loading: true, courses: [] })
+    apiClient(department).then((courses) => {
+      this.setState({ _loading: false, courses: courses })
+    })
+  }
 
   renderDepartmentSelect = () => {
     return (
       <select
-        name='department'
+        name="department"
         onChange={this.onSelectDepartment}
         value={this.state.department || ''}
       >
@@ -64,17 +67,21 @@ module.exports = class extends React.Component {
         <option value="core">NodeSchool: Core</option>
         <option value="electives">NodeSchool: Electives</option>
       </select>
-    );
-  };
+    )
+  }
 
   renderCourseSelect = () => {
     if (this.state._loading) {
-      return <img alt="loading" src="/img/loading.gif" />;
+      return <img alt="loading" src="/img/loading.gif" />
     }
-    if (!this.state.department || !this.state.courses.length) return <span />;
+    if (!this.state.department || !this.state.courses.length) return <span />
 
     return (
-      <select name='course' onChange={this.onSelectCourse} value={this.state.course || ''}>
+      <select
+        name="course"
+        onChange={this.onSelectCourse}
+        value={this.state.course || ''}
+      >
         {[
           <option value="" key="course-none">
             Which course?
@@ -84,11 +91,11 @@ module.exports = class extends React.Component {
             <option value={course} key={i}>
               {course}
             </option>
-          ))
+          )),
         ]}
       </select>
-    );
-  };
+    )
+  }
 
   render() {
     return (
@@ -97,16 +104,16 @@ module.exports = class extends React.Component {
         <br />
         {this.renderCourseSelect()}
       </div>
-    );
+    )
   }
-};
+}
 
 function apiClient(department) {
   return {
-    then: function(cb) {
+    then: function (cb) {
       setTimeout(() => {
-        cb(Courses[department]);
-      }, 1000);
-    }
-  };
+        cb(Courses[department])
+      }, 1000)
+    },
+  }
 }
