@@ -1,23 +1,31 @@
-# The Flaky Test Challenge
+# flaky-test-cypress
 
-As an engineer, you will be expected to ensure that all new features and fixes do not cause regressions or headaches for active users. Tests are an important tool for keeping our apps usable and bug-free. However, tests are only useful if they are reliable. This challenge will test your ability to understand and fix a flaky test of a React app.
+> The Flaky Test Challenge
 
-## The Challenge
+## Levels
 
-The test for this app sometimes passes and sometimes fails. You should be able to quickly figure out a change that will make the test 100% reliable.
+There are several flaky situations. Each example is in its own branch and includes changes to the application source code and the testing code. Can you solve each one by fixing the _test code_ only?
 
-You may modify any file or files *except* those in the `src/` directory.
+- `level1` to warm you up
 
-## Instructions
+## Install and run the app
 
-_You must follow these steps for your solution to be accepted_
+- clone this repo to your local machine
+- check out a branch with the flaky test `git checkout level1`, `git checkout level2`, etc
+- run `npm install` to install all dependencies
+- start the app in one terminal with `npm start`. You should see:
 
-**Forking this repo is an immediate disqualification**
+```
+Compiled successfully!
 
-How to attempt this challenge:
+The app is running at:
 
-1) Clone this challenge repo
-2) Solve the challenge locally
-3) Create a new repo in your GitHub account and note the git url
-4) Set your new repo as the origin for your local solution: `git remote set-url origin ${your repo url}`
-5) Push the solution to your repo
+  http://localhost:3000/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+```
+
+- open Cypress test runner with `npx cypress open` command. Click on the `app.cy.js` spec to run it.
+
+Did the spec pass?
