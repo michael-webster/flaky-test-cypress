@@ -1,4 +1,10 @@
 describe('Sign Up', () => {
+  // Can you figure out why this test fails?
+  // How would you fix it?
+  // Tips: instead of "command - command - command" tests,
+  // try doing "command - assertion - command - assertion" to make
+  // sure the app has executed the command before proceeding
+
   it('Adds person to course', () => {
     cy.visit('/')
 
