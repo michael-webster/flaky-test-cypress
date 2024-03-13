@@ -9,6 +9,7 @@
 There are several flaky situations. Each example is in its own branch and includes changes to the application source code and the testing code. Can you solve each one by fixing the _test code_ only?
 
 - branch [level1](https://github.com/bahmutov/flaky-test-cypress/tree/level1) to warm you up
+- branch [level2](https://github.com/bahmutov/flaky-test-cypress/tree/level2) where you need to burn the test to prove it is flaky or not
 
 ## Install and run the app
 
