@@ -16,7 +16,7 @@ module.exports = {
           localStorage.people = JSON.stringify(people)
           return resolve({ success: true })
         },
-        between(3500, 4050),
+        between(3500, 4120),
       )
     })
   },
