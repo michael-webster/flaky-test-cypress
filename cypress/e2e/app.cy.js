@@ -17,5 +17,7 @@ describe('Sign Up', () => {
     // and the list of registered people should contain the new person
     // including the email and the course name
     cy.get('li').should('contain', 'Some Name - some@email.com - core - git-it')
+
+    // did this test pass? what if you run it several times?
   })
 })
