@@ -1,6 +1,10 @@
 /// <reference types="cypress" />
 
 describe('Sign Up', () => {
+  // if you repeat this test enough times you can see
+  // it has a problem typing the email
+  // Can you retype the email if the first attempt fails?
+
   Cypress._.times(10, (k) => {
     it('Adds person to course ' + (k + 1) + ' / 10', () => {
       cy.visit('/')
