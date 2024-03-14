@@ -9,8 +9,9 @@
 There are several flaky situations. Each example is in its own branch and includes changes to the application source code and the testing code. Can you solve each one by fixing the _test code_ only? Try fixing the spec before watching the video that shows my solution.
 
 - branch [level1](https://github.com/bahmutov/flaky-test-cypress/tree/level1) to warm you up. [Solution video](https://youtu.be/iHDZ53gLltc)
-- branch [level2](https://github.com/bahmutov/flaky-test-cypress/tree/level2) where you need to burn the test to prove it is flaky or not
+- branch [level2](https://github.com/bahmutov/flaky-test-cypress/tree/level2) where you need to burn the test to prove it is flaky or not [Solution video](https://youtu.be/bWR6zFGywMI)
 - branch [level3](https://github.com/bahmutov/flaky-test-cypress/tree/level3) shows a fast test that somehow still fails
+- branch [level4](https://github.com/bahmutov/flaky-test-cypress/tree/level4) has a situation where the app "loses" a few first entered letters
 
 ## Install and run the app
 
