@@ -12,6 +12,7 @@ There are several flaky situations. Each example is in its own branch and includ
 - branch [level2](https://github.com/bahmutov/flaky-test-cypress/tree/level2) where you need to burn the test to prove it is flaky or not. [Solution video](https://youtu.be/bWR6zFGywMI)
 - branch [level3](https://github.com/bahmutov/flaky-test-cypress/tree/level3) shows a fast test that somehow still fails. [Solution video](https://www.youtube.com/watch?v=MbsEUQPMDzw)
 - branch [level4](https://github.com/bahmutov/flaky-test-cypress/tree/level4) has a situation where the app "loses" a few first entered letters. [Solution video](https://www.youtube.com/watch?v=iHjPHX2rYiM)
+- branch [level5](https://github.com/bahmutov/flaky-test-cypress/tree/level5) has the app "losing" an element we are trying to click. [Solution video](https://youtu.be/BsOIhxEVe4s)
 
 If you like practicing Cypress test writing and want more hands-on exercises, check out my [Cypres courses](https://cypress.tips/courses).
 
