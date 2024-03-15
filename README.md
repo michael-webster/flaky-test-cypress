@@ -14,6 +14,8 @@ There are several flaky situations. Each example is in its own branch and includ
 - branch [level4](https://github.com/bahmutov/flaky-test-cypress/tree/level4) has a situation where the app "loses" a few first entered letters. [Solution video](https://www.youtube.com/watch?v=iHjPHX2rYiM)
 - branch [level5](https://github.com/bahmutov/flaky-test-cypress/tree/level5) has the app "losing" an element we are trying to click. [Solution video](https://youtu.be/BsOIhxEVe4s)
 
+📝 Read the blog post [Cypress Flaky Tests Exercises](https://glebbahmutov.com/blog/cypress-flaky-tests-exercises/)
+
 If you like practicing Cypress test writing and want more hands-on exercises, check out my [Cypres courses](https://cypress.tips/courses).
 
 ## Install and run the app
