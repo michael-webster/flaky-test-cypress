@@ -25,9 +25,9 @@ module.exports = {
       then: function (cb) {
         const shouldFail = Math.random() < 0.1
         const timeout = shouldFail ? 300 : 5000
+        const people =
+          JSON.parse(localStorage.people || 'null') || defaultPeople
         setTimeout(() => {
-          const people =
-            JSON.parse(localStorage.people || 'null') || defaultPeople
           cb(people)
         }, timeout)
       },
