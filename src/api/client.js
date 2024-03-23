@@ -7,32 +7,30 @@ module.exports = {
         fetch(url)
           .then((response) => response.json())
           .then((data) => {
-            console.log('data')
-            console.log(data)
+            // console.log('data')
+            // console.log(data)
             cb(data)
           })
-        // setTimeout(() => {
-        //   cb(JSON.parse(localStorage.people || '[]'))
-        // }, Math.random() * 1000)
       },
     }
   },
 
   savePeople: function (person) {
     return new Promise((resolve, reject) => {
-      setTimeout(
-        () => {
-          fetch(url, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(person),
-          })
-          return resolve({ success: true })
-        },
-        between(10, 100),
-      )
+      resolve({ success: true })
+
+      const delay = between(10, 180)
+      console.log('save delay %d', delay)
+
+      setTimeout(() => {
+        fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(person),
+        })
+      }, delay)
     })
   },
 }
