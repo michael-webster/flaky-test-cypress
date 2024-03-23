@@ -1,0 +1,11 @@
+{
+  "students": [
+    {
+      "name": "Some Name",
+      "email": "some@email.com",
+      "course": "git-it",
+      "department": "core",
+      "id": 1
+    }
+  ]
+}

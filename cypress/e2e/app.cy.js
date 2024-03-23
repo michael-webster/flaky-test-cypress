@@ -1,4 +1,10 @@
+/// <reference types="cypress" />
+
 describe('Sign Up', () => {
+  beforeEach(() => {
+    cy.request('POST', 'http://localhost:4000/reset', { students: [] })
+  })
+
   it('Adds person to course', () => {
     cy.visit('/')
 
