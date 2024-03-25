@@ -147,14 +147,9 @@ module.exports = class extends React.Component {
           }
         </form>
 
-        <div>
-          <h3>People</h3>
-          <ul>
-            {this.state.people.map(({ name, email, department, course }, i) => (
-              <li key={i}>{[name, email, department, course].join(' - ')}</li>
-            ))}
-          </ul>
-        </div>
+        {this.state._saveStatus === 'SUCCESS' ? (
+          <iframe src="http://localhost:5000" id="students"></iframe>
+        ) : null}
       </div>
     )
   }
