@@ -19,8 +19,7 @@ module.exports = {
     return new Promise((resolve, reject) => {
       resolve({ success: true })
 
-      const delay = between(10, 180)
-      console.log('save delay %d', delay)
+      const delay = 0
 
       setTimeout(() => {
         fetch(url, {
@@ -33,8 +32,4 @@ module.exports = {
       }, delay)
     })
   },
-}
-
-function between(min, max) {
-  return Math.random() * (max - min) + min
 }

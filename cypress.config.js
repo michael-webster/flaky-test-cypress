@@ -6,4 +6,5 @@ module.exports = defineConfig({
     supportFile: false,
     fixturesFolder: false,
   },
+  chromeWebSecurity: false,
 })
