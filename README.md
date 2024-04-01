@@ -20,7 +20,7 @@ There are several flaky situations. Each example is in its own branch and includ
 
 📝 Read the blog post [Cypress Flaky Tests Exercises](https://glebbahmutov.com/blog/cypress-flaky-tests-exercises/)
 
-If you like practicing Cypress test writing and want more hands-on exercises, check out my [Cypres courses](https://cypress.tips/courses).
+If you like practicing Cypress test writing and want more hands-on exercises, check out my [Cypres courses](https://cypress.tips/courses). Also 📝 read the blog post [Flaky IFrame Online Store Test](https://glebbahmutov.com/blog/flaky-iframe-test/).
 
 ## Install and run the app
 
