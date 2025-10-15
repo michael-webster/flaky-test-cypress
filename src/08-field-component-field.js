@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-module.exports = class extends React.Component {
+export default class extends React.Component {
   static propTypes = {
     placeholder: PropTypes.string,
     name: PropTypes.string.isRequired,
@@ -15,21 +15,14 @@ module.exports = class extends React.Component {
     error: false,
   }
 
-  getDerivedStateFromProps(nextProps) {
+  static getDerivedStateFromProps(nextProps) {
     return { value: nextProps.value }
   }
 
   onChange = (evt) => {
     const name = this.props.name
-    let value = evt.target.value
+    const value = evt.target.value
     const error = this.props.validate ? this.props.validate(value) : false
-
-    if (name === 'email' && value === 'so') {
-      if (Math.random() < 0.2) {
-        console.log('Random email error!')
-        evt.target.value = value = ''
-      }
-    }
 
     this.setState({ value, error })
 

@@ -9,8 +9,18 @@
 There are several flaky situations. Each example is in its own branch and includes changes to the application source code and the testing code. Can you solve each one by fixing the _test code_ only? Try fixing the spec before watching the video that shows my solution.
 
 - branch [level1](https://github.com/bahmutov/flaky-test-cypress/tree/level1) to warm you up. [Solution video](https://youtu.be/iHDZ53gLltc)
-- branch [level2](https://github.com/bahmutov/flaky-test-cypress/tree/level2) where you need to burn the test to prove it is flaky or not
-- branch [level3](https://github.com/bahmutov/flaky-test-cypress/tree/level3) shows a fast test that somehow still fails
+- branch [level2](https://github.com/bahmutov/flaky-test-cypress/tree/level2) where you need to burn the test to prove it is flaky or not. [Solution video](https://youtu.be/bWR6zFGywMI)
+- branch [level3](https://github.com/bahmutov/flaky-test-cypress/tree/level3) shows a fast test that somehow still fails. [Solution video](https://www.youtube.com/watch?v=MbsEUQPMDzw)
+- branch [level4](https://github.com/bahmutov/flaky-test-cypress/tree/level4) has a situation where the app "loses" a few first entered letters. [Solution video](https://www.youtube.com/watch?v=iHjPHX2rYiM)
+- branch [level5](https://github.com/bahmutov/flaky-test-cypress/tree/level5) has the app "losing" an element we are trying to click. [Solution video](https://youtu.be/BsOIhxEVe4s)
+- branch [level6](https://github.com/bahmutov/flaky-test-cypress/tree/level6) has the app loading slowly which causes random failures. [Solution video](https://youtu.be/ae6QkkWUTog)
+- branch [level7](https://github.com/bahmutov/flaky-test-cypress/tree/level7) shows the flake when saving the data is too slow. [Solution video](https://youtu.be/tza6cM9E_q0)
+- branch [level8](https://github.com/bahmutov/flaky-test-cypress/tree/level8) has an iframe we need to wait for. [Solution video](https://youtu.be/jU6-FtlL5KU)
+- branch [level9](https://github.com/bahmutov/flaky-test-cypress/tree/level9) deals with a random popup on visit. [Solution video](https://youtu.be/L4EQT2L7yLY)
+
+📝 Read the blog post [Cypress Flaky Tests Exercises](https://glebbahmutov.com/blog/cypress-flaky-tests-exercises/)
+
+If you like practicing Cypress test writing and want more hands-on exercises, check out my [Cypres courses](https://cypress.tips/courses). Also 📝 read the blog post [Flaky IFrame Online Store Test](https://glebbahmutov.com/blog/flaky-iframe-test/).
 
 ## Install and run the app
 
