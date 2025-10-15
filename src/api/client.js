@@ -1,5 +1,5 @@
-module.exports = {
-  loadPeople: function () {
+export default {
+  loadPeople: function() {
     return {
       then: function (cb) {
         setTimeout(() => {
