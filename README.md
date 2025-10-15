@@ -40,7 +40,7 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 ```
 
-- open Cypress test runner with `npx cypress open` command. Click on the [app.cy.js](./cypress/e2e/app.cy.js) spec to run it.
+- run `npm test` to run the cypress tests. You will need to run the test multiple times to reproduce the flaky behavior.
 
 Did the spec pass?
 
