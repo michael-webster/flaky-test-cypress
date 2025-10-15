@@ -9,7 +9,7 @@ const Courses = {
   electives: Electives,
 }
 
-module.exports = class extends React.Component {
+export default class extends React.Component {
   static propTypes = {
     department: PropTypes.string,
     course: PropTypes.string,
@@ -23,7 +23,7 @@ module.exports = class extends React.Component {
     _loading: false,
   }
 
-  getDerivedStateFromProps(update) {
+  static getDerivedStateFromProps(update) {
     return {
       department: update.department,
       course: update.course,
@@ -42,12 +42,10 @@ module.exports = class extends React.Component {
 
   onSelectCourse = (evt) => {
     const course = evt.target.value
-    evt.target.value = ''
-    setTimeout(() => {
-      this.setState({ course })
-      this.props.onChange({ name: 'course', value: course })
-    }, 2000)
+    this.setState({ course })
+    this.props.onChange({ name: 'course', value: course })
   }
+
 
   fetch = (department) => {
     this.setState({ _loading: true, courses: [] })
