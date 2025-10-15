@@ -3,14 +3,14 @@
 import React from 'react';
 import isEmail from 'validator/lib/isEmail';
 
-const apiClient = require('./api/client')
-const Field = require('./08-field-component-field.js');
-const CourseSelect = require('./09-course-select.js');
+import apiClient from './api/client'
+import Field from './08-field-component-field.js';
+import CourseSelect from './09-course-select.js';
 
 const content = document.createElement('div');
 document.body.appendChild(content);
 
-module.exports = class extends React.Component {
+export default class extends React.Component {
   static displayName = '10-remote-persist';
 
   state = {

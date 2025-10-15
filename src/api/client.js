@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   loadPeople: function() {
     return {
       then: function(cb) {
