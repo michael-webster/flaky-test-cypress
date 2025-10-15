@@ -19,8 +19,8 @@ const defaultPeople = [
   },
 ]
 
-module.exports = {
-  loadPeople: function () {
+export default {
+  loadPeople: function() {
     return {
       then: function (cb) {
         const shouldFail = Math.random() < 0.1
