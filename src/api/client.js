@@ -1,7 +1,7 @@
 const url = 'http://localhost:4000/students'
 
-module.exports = {
-  loadPeople: function () {
+export default {
+  loadPeople: function() {
     return {
       then: function (cb) {
         fetch(url)
